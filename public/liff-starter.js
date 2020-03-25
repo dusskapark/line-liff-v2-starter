@@ -150,6 +150,21 @@ function registerButtonHandlers() {
             });
         }
     });
+    // user picker
+    document.getElementById('shareTargetPickerButton').addEventListener('click', function() {
+      if (!liff.isInClient()) {
+          sendAlertIfNotInClient();
+      } else {
+          liff.shareTargetPicker([{
+              'type': 'text',
+              'text': "You've successfully sent a message! Hooray!"
+          }]).then(function() {
+              window.alert('ShareTargetPicker was launched');
+          }).catch(function(error) {
+              window.alert('Error sending message: ' + error);
+          });
+      }
+    });
 
     // get access token
     document.getElementById('getAccessToken').addEventListener('click', function() {
