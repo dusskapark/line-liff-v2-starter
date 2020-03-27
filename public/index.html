@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LIFF Starter</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -24,7 +25,19 @@
                 </div>
                 <div class="buttonRow">
                     <button id="shareTargetPickerButton">User picker</button>
-                    <!-- <button id="getProfileButton">Get Profile</button> -->
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Child sheet</a>
+                </div>
+            </div>
+  
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal bottom-sheet">
+                <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
                 </div>
             </div>
             <!-- ACCESS TOKEN DATA -->
@@ -135,6 +148,7 @@
             <p>Unable to receive the LIFF ID as an environment variable.</p>
         </div>
         <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="liff-starter.js"></script>
     </body>
 </html>
